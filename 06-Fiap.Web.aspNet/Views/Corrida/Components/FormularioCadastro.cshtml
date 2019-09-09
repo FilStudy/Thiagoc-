@@ -1,0 +1,18 @@
+﻿@model Corrida
+@{
+    ViewData["Title"] = "FormularioCadastro";
+}
+
+<label asp-for="Nome"></label>
+<input asp-for="Nome" class="form-control"/>
+
+<label asp-for="Distancia"></label>
+<input asp-for="Distancia" class="form-control"/>
+
+<label asp-for="Premiacao"></label>
+<input asp-for="Premiacao" class="form-check"/>
+
+<label asp-for="Categoria"></label>
+<select asp-for="Categoria" class="form-control" asp-items="@Html.GetEnumSelectList<Categoria>()">
+    <option>Selecione</option>
+</select><br />
